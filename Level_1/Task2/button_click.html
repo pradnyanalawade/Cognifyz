@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Button</title>
+    <style>
+        button {
+           display: block;
+            margin: 250px 89px 99px 300px;
+            padding: 45px 29px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration-style: dashed;
+        }
+        body{
+            background-image:repeating-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/img2.jpg);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="colorButton" onclick="changeColor()">Click me to change color</button>
+
+    <script>
+        function changeColor() {
+            // Generate a random color
+            var randomColor = getRandomColor();
+
+            // Apply the new color to the button
+            document.getElementById('colorButton').style.backgroundColor = randomColor;
+        }
+
+        function getRandomColor() {
+            // Generate a random hexadecimal color code
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>

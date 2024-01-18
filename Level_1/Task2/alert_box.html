@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Based on Time</title>
+    <script>
+        function displayGreeting() {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+
+            var greeting;
+
+            if (currentHour < 12) {
+                greeting = 'Good morning!';
+            } else if (currentHour < 18) {
+                greeting = 'Good afternoon!';
+            } else {
+                greeting = 'Good evening!';
+            }
+
+            alert(greeting);
+        }
+    </script>
+    <style>
+        body{
+             background-image:repeating-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/img9.webp);
+        }
+           button {
+           display: block;
+            margin: 195px 89px 99px 150px;
+            padding: 15px 11px;
+            font-size: 25px;
+            cursor: pointer;
+            text-decoration-style: dashed;
+                background: linear-gradient(to right, #0befea, #0babef);
+               color:black;
+                   border-radius:default;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="displayGreeting()">Click me to display greeting</button>
+
+</body>
+</html>
